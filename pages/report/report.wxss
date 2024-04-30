@@ -1,0 +1,5 @@
+/* pages/report/report.wxss */
+.weui-input,.picker{
+	border-bottom: 1px solid #f1f1f1;
+	padding: 20rpx 0;
+}

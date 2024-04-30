@@ -1,0 +1,49 @@
+<!--pages/report/report.wxml-->
+<view class="m-20 p-20 bg-white">
+	<form catchsubmit="formSubmit" catchreset="formReset">
+		<view class="page-section mb-20">
+			<view class="page-section-title mb-10">所属BU</view>
+			<view class="weui-cell__bd">
+				<input class="weui-input" bindinput="formSetData" value="{{formData.tenantName}}" maxlength="10" name="input" placeholder="请输入所属BU" />
+			</view>
+		</view>
+		<view class="mb-20">
+			<view class="section__title mb-10">隐患基地</view>
+			<picker bindchange="bindPickerChange" value="{{formData.baseName}}" range="{{array}}">
+				<view class="picker">
+					<text class="text-969799">当前选择：</text>{{formData.baseName || '--'}}
+				</view>
+			</picker>
+		</view>
+		<view class="mb-20">
+			<view class="section__title mb-10">隐患厂区</view>
+			<picker bindchange="bindPickerChange" value="{{formData.baseName}}" range="{{array}}">
+				<view class="picker">
+					<text class="text-969799">当前选择：</text>{{formData.baseName || '--'}}
+				</view>
+			</picker>
+		</view>
+		<view class="mb-20">
+			<view class="section__title mb-10">隐患车间</view>
+			<picker bindchange="bindPickerChange" value="{{formData.baseName}}" range="{{array}}">
+				<view class="picker">
+					<text class="text-969799">当前选择：</text>{{formData.baseName || '--'}}
+				</view>
+			</picker>
+		</view>
+		<view class="page-section mb-20">
+			<view class="page-section-title mb-10">隐患描述</view>
+			<view class="weui-cell__bd">
+				<textarea auto-height class="weui-input" bindinput="formSetData" value="{{formData.tenantName}}" name="input" placeholder="请输入隐患描述" />
+			</view>
+		</view>
+		<view style="width: 90%; margin-left:5%;">
+			<addImage count="{{count}}" images="{{images}}" addedCount="{{addedCount}}" bind:chooseImage="chooseImage" bind:deleteImage="deleteImage"></addImage>
+		</view>
+
+		<view class="btn-area text-center">
+			<button style="margin: 30rpx 10rpx" size="mini" type="primary" formType="submit">上报</button>
+			<button style="margin: 30rpx 10rpx" size="mini" formType="reset">取消</button>
+		</view>
+	</form>
+</view>

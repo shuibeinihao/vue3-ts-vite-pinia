@@ -1,0 +1,42 @@
+/**index.wxss**/
+.background-image {  
+	width: 400rpx;
+	height: 400rpx;
+	position: absolute;
+	z-index: 2;
+	top: 30rpx;
+	right: 33rpx;
+}  
+.banner {  
+	position: relative;
+	background-image: linear-gradient(#e2ebf6, #f3f7fa);
+	height: 430rpx;
+	z-index: -1;
+}
+.banner .title{
+	padding-top: 60rpx;
+	padding-left: 40rpx;
+	color:#3661b3;
+}
+.banner .title .tit1{
+	font-weight: bold;
+	font-size: 55rpx;
+}
+.banner .title .desc{
+	font-size: 36rpx;
+	padding-top: 15rpx;
+}
+
+.bg-01{
+	background-color: #3661b3;
+	height: 100%;
+}
+.bg-02{
+	background-color:#660;
+	height: 100%;
+}
+.bg-03{
+	background-color: #ccc;
+	height: 100%;
+}
+/*feed-item part is in app.wxss for multiplexing*/

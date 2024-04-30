@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="index">
+  <view class="banner">
+    <view class="title">
+      <view class="tit1">隐患上报中心</view>
+      <view class="desc">为成产安全保价护航</view>
+    </view>
+    <image src="../../images/bg.png" class="background-image" />
+  </view>
+  <view class="nav mx-20 bg-white mt--180 round-16 py-40">
+    <mp-row class="text-center">
+      <mp-col span="6">
+        <image src="../../images/appear-1.png" class="w-100 h-100" />
+        <view>我的上报</view>
+      </mp-col>
+      <mp-col span="6">
+        <image src="../../images/exchangeGift-2.png" class="w-100 h-100" />
+        <view>兑换礼品</view>
+      </mp-col>
+      <mp-col span="6">
+        <image src="../../images/waiting.png" class="w-100 h-100" />
+        <view>待我处理</view>
+      </mp-col>
+      <mp-col span="6">
+        <image src="../../images/notice@2x.png" class="w-100 h-100" />
+        <view>消息中心</view>
+      </mp-col>
+    </mp-row>
+  </view>
+  <view class="mt-20 mx-20 round-16 overflow-hidden">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="mt-20 mx-20 round-16 bg-white px-40 py-20">
+    <view class="font-700">
+      热议咨讯
+    </view>
+    <scroll-view class="mt-20" scroll-y="true" bindscroll="scroll" bindscrolltolower="lower" style="width: 100%;height:800rpx">
+      <mp-row class="py-20 block border-bottom-1" wx:for="{{news}}" wx:key="index">
+        <mp-col span="19">
+          <view class="font-700 text-40">{{item.title}}</view>
+          <view class="text-969799 mt-16">{{item.date}}</view>
+          <view class="text-969799 mt-10">咨讯来源：{{item.source}}</view>
+        </mp-col>
+        <mp-col span="5">
+          <image src="../../images/waiting.png" class="w-100 h-100" mode="" />
+        </mp-col>
+      </mp-row>
+    </scroll-view>
+  </view>
+</view>
